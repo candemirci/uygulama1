@@ -10,7 +10,14 @@
 		
 		
 		
-		
+		$dosya=fopen("bilgi.txt","r");
+			while (!feof($dosya))
+			{
+				$kaynak=fgets($dosya,256);
+				$kaynak=trim($kaynak);
+				$dizi=explode("-",$kaynak);
+				echo "<option>".$dizi[0];
+			}
 		
 		
 		
@@ -74,7 +81,8 @@
 			
 			
 			
-			
+			$yazilacak=$_POST["no"]."-".$_POST["secim"]."-".$kredi."\n";
+			fputs($dosya,$yazilacak);
 			
 			
 			
