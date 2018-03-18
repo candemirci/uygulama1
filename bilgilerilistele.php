@@ -16,7 +16,12 @@
 	{
 		
 		
-		
+		$kaynak1=fgets($dosya1,256);
+		$kaynak2=fgets($dosya2,256);
+		$kaynak1=trim($kaynak1);
+		$kaynak2=trim($kaynak2);
+		$dizi1=explode("-",$kaynak1);
+		$dizi2=explode("-",$kaynak2);
 		
 		
 		
